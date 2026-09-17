@@ -1,0 +1,11 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "lil-redis",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-08-22",
+	"observability": { "enabled": true },
+	"durable_objects": {
+		"bindings": [{ "name": "LIL_REDIS", "class_name": "LilRedis" }]
+	},
+	"migrations": [{ "tag": "v1", "new_sqlite_classes": ["LilRedis"] }]
+}
