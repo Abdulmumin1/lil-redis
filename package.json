@@ -1,0 +1,27 @@
+{
+	"name": "lil-redis",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit",
+		"types": "wrangler types",
+		"cli": "node scripts/cli.mjs"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"workerd",
+			"sharp"
+		]
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.22.0",
+		"typescript": "^5.6.0",
+		"vitest": "~4.1.11",
+		"wrangler": "^4.43.0"
+	}
+}
